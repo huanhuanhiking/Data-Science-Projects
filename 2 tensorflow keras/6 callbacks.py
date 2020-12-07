@@ -3,7 +3,7 @@
 
 from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
 
-checkpoint = ModelCheckpoint("vgg16_1.h5",
+checkpoint = ModelCheckpoint("model.h5",
                              monitor='val_acc',
                              verbose=1,
                              save_best_only=True,
