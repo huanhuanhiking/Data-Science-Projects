@@ -1,5 +1,8 @@
-# DNN model files
-.h5
+# ignore hdf5 files
+*.hdf
+*.h5
+*.hdf5
+*.he5
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
