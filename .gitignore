@@ -4,6 +4,10 @@
 *.hdf5
 *.he5
 
+# ignore all jpg
+**/*.jpg
+!/E:/Github/Data-Science-Projects/tensorflow keras/dog breeds/images/images/*/*.jpg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
