@@ -7,10 +7,15 @@ from keras.layers import Dense, Conv2D, MaxPool2D , Flatten, Dropout
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 
-from keras.applications import vgg16
+from keras.applications.vgg16 import VGG16
 
-vgg_conv = vgg16.VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+vgg_conv = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 
+# Freeze all the layers
+vgg_conv.trainable=False
+
+
+'''
 # Freeze all the layers
 for layer in vgg_conv.layers[:]:
     layer.trainable = False
@@ -18,6 +23,8 @@ for layer in vgg_conv.layers[:]:
 # Check the trainable status of the individual layers
 for layer in vgg_conv.layers:
     print(layer, layer.trainable)
+'''
+
 
 # Create the model
 model = Sequential()
